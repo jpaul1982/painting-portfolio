@@ -1,3 +1,6 @@
 node_modules
 dist
 .DS_Store
+
+# Full-size source images (web copies live in public/works)
+originals/
