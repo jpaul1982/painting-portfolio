@@ -15,9 +15,9 @@ export default function Hero({ onOpen }) {
       </div>
       <button className="hero-art" onClick={() => onOpen(featured)} aria-label={`View ${featured.title}`}>
         <img src={featured.image} alt={featured.title} />
-        <span className="hero-caption">
+        {/* <span className="hero-caption">
           <em>{featured.title}</em>{featured.year ? ` · ${featured.year}` : ''}
-        </span>
+        </span> */}
       </button>
     </section>
   )
