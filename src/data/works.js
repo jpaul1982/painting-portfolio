@@ -39,10 +39,10 @@ export const works = [
   { id: 'little-girl', title: 'Girl, Looking Down', series: 'Drawings', status: 'nfs', medium: 'Graphite', image: '/works/little-girl.jpg' },
   { id: 'charcoal-dog', title: 'Cane Corso', series: 'Drawings', status: 'nfs', medium: 'Charcoal', image: '/works/charcoal-dog.jpg' },
   { id: 'molly', title: 'Molly', series: 'Drawings', medium: 'Graphite',status: 'nfs', image: '/works/molly.jpg' },
-  { id: 'portrait-study', title: 'Portrait Study', series: 'Drawings', status: 'nfs', medium: 'Graphite', image: '/works/portrait-study.jpg' },
-  { id: 'jesse', title: 'Jesse & Tank(s)', series: 'Drawings', status: 'nfs', medium: 'Monochrome', image: '/works/jesse.jpg' },
+  { id: 'portrait-study', title: 'Portrait Study', series: 'Drawings', status: 'nfs', medium: 'Charcoal', image: '/works/portrait-study.jpg' },
+  { id: 'jesse', title: 'Jesse & Tank(s)', series: 'Drawings', status: 'nfs', medium: 'Charcoal', image: '/works/jesse.jpg' },
 
   // Murals
-  { id: 'sumo-mural', title: 'Sumo Wrestlers', series: 'Murals', medium: 'Mural', image: '/works/sumo-mural.jpg' },
-  { id: 'deutschland-meats-mural', title: 'Deutschland Meats', series: 'Murals', medium: 'Exterior mural', image: '/works/deutschland-meats-mural.jpg' },
+  { id: 'sumo-mural', title: 'Sumo Wrestlers', series: 'Murals', medium: 'Chalk Pastel', image: '/works/sumo-mural.jpg' },
+  { id: 'deutschland-meats-mural', title: 'Deutschland Meats', series: 'Murals', medium: 'Paint', image: '/works/deutschland-meats-mural.jpg' },
 ]

@@ -20,6 +20,28 @@ export default function useReveal() {
     scan()
     const mo = new MutationObserver(scan)
     mo.observe(document.body, { childList: true, subtree: true })
-    return () => { io.disconnect(); mo.disconnect() }
+
+    // Backup for fast scrolls/jumps: anything already scrolled past gets revealed too,
+    // otherwise it could stay invisible when you scroll back up.
+    let frame = 0
+    const catchUp = () => {
+      cancelAnimationFrame(frame)
+      frame = requestAnimationFrame(() => {
+        document.querySelectorAll('.reveal:not(.in)').forEach((el) => {
+          if (el.getBoundingClientRect().top < window.innerHeight) {
+            el.classList.add('in')
+            io.unobserve(el)
+          }
+        })
+      })
+    }
+    window.addEventListener('scroll', catchUp, { passive: true })
+
+    return () => {
+      io.disconnect()
+      mo.disconnect()
+      cancelAnimationFrame(frame)
+      window.removeEventListener('scroll', catchUp)
+    }
   }, [])
 }
